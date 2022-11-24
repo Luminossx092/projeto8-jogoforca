@@ -1,9 +1,9 @@
-export default function Letras(){
-    return(
+export default function Letras({ alfabeto,isGameOn }) {
+    return (
         <div className="Letras">
-            <div >
-                <button className="Letra">A</button>
-            </div>
+            {alfabeto.map((l) => 
+                <button disabled={!isGameOn} className={`Letra ${isGameOn?"Ativada":"Desativada"}`}>{l}</button>
+            )}
         </div>
     )
 }

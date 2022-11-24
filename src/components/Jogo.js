@@ -1,4 +1,9 @@
-export default function Jogo() {
+export default function Jogo({setIsGameOn,palavraJogo,palavras,setPalavraJogo}) {
+    function StartGame(){
+        setIsGameOn(true);
+        setPalavraJogo(palavras[Math.floor(Math.random()*palavras.length)].split(''))
+    }
+
     return (
         <div class="Jogo">
             <div >
@@ -6,9 +11,9 @@ export default function Jogo() {
             </div>
             <div>
                 <div className="MenuJogo">
-                    <button class="BotaoIniciar">Iniciar</button>
+                    <button onClick={StartGame} class="BotaoIniciar">Escolher Palavra</button>
                     <div className="PalavraJogo">
-                        Palavra
+                        {palavraJogo.map((l)=>"_").join(' ')}
                     </div>
                 </div>
             </div>
