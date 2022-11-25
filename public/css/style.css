@@ -37,22 +37,22 @@
 
 .Jogo .PalavraJogo {
   height: 68px;
-  width: 323px;
+  width: 360px;
 
   font-family: 'Noto Sans', sans-serif;
   font-size: 50px;
   font-weight: 700;
   line-height: 68px;
   text-align: center;
-  /*
-background: #000000;
-
-background: #27AE60;
-background: #FF0000;
-*/
-
+  color: black;
 }
 
+.Jogo .Ganhou{
+  color: green;
+}
+.Jogo .Perdeu{
+  color:red;
+}
 .Letras {
   height: 91px;
   width: 664px;
