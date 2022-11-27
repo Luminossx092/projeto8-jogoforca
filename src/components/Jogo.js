@@ -17,7 +17,7 @@ export default function Jogo({ setIsGameOn, palavraJogo, palavras, setPalavraJog
             <div>
                 <div className="MenuJogo">
                     <button data-test="choose-word" onClick={StartGame} class="BotaoIniciar">Escolher Palavra</button>
-                    <div data-test="word" data-answer={`${palavraJogo}`} className={`PalavraJogo 
+                    <div data-test="word" data-answer={`${palavraJogo.join("")}`} className={`PalavraJogo 
                     ${(gameIsOver) ? Ganhou() : ""}`}>
                         {gameIsOver ? palavraJogo.map((l) => {
                             return l;
